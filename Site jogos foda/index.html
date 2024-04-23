@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God of War Ragnarok</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body background="background.jpg">
+    <div class="container" align="center">
+        <h1>Welcome to God of War Ragnarok</h1>
+        <form class="password-form">
+            <input type="password" placeholder="Enter password" id="password">
+            <button type="button" onclick="checkPassword()">Enter</button>
+        </form>
+        <p id="error-message" class="error-message"></p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "godofwar") {
+                window.location.href = "home.html";
+            } else {
+                document.getElementById("error-message").innerText = "Incorrect password. Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>
